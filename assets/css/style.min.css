@@ -1,0 +1,601 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('./custom_components.css');
+/* ============== colors =============== */
+
+:root {
+    --white: #ffffff;
+    --white100: #f4f5f9;
+    --black: #000000;
+    --primary: #3B76EF;
+    --primary100: #54718B;
+    --danger: #F03737;
+    --success: #6DD400;
+    --green100: #F4FAFF;
+    --gray: #f2f2f2;
+    --gray100: #E1E1E1;
+    /* font variables */
+    --openSans: 'Open Sans', sans-serif;
+    --fontLight: 300;
+    --fontRegular: 400;
+    --fontSemiBold: 600;
+    --fontBold: 700;
+    --fontExtraBold: 800;
+}
+
+/* ============== ends: colors =============== */
+
+/* ============== base css =============== */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--openSans);
+    font-size: 16px;
+    font-weight: var(--fontLight);
+    color: var(--primary100);
+    line-height: 1.5;
+    overflow: hidden;
+    background: var(--white100);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: var(--openSans);
+    font-weight: var(--fontLight);
+    color: var(--primary100);
+    margin: 0;
+}
+
+h6 {
+    font-size: 15px;
+    font-weight: var(--fontSemiBold);
+    color: var(--black);
+}
+
+span {
+    font-size: 13px;
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button, input, textarea {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.form-group {
+    position: relative;
+}
+
+/* scrolll bar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bebebe;
+    cursor: pointer !important;
+}
+
+/* ============== Ends: base css =============== */
+
+.main_wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* ============== main classes css ============== */
+
+.primary_nav, .secondary_nav {
+    background: var(--white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.primary_nav {
+    width: 450px;
+}
+
+.secondary_nav {
+    width: 600px;
+    padding: 20px;
+}
+
+.main_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* ============== ends: main classes css ============== */
+
+/* ============== primary_nav css ============== */
+
+.primary_nav .nav-brand {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.primary_nav .nav-brand span {
+    padding-left: 10px;
+    font-weight: var(--fontSemiBold);
+    color: var(--black);
+}
+
+.primary_nav .custom_nav {
+    flex-direction: column;
+    display: flex;
+}
+
+.primary_nav .custom_nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 10px;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: var(--fontLight);
+    color: var(--primary100);
+    text-transform: capitalize;
+    border-left: solid 4px transparent;
+    background-color: transparent;
+}
+
+.primary_nav .custom_nav .nav-item {
+    margin: 0;
+}
+
+.primary_nav .custom_nav .nav_img_active {
+    display: none;
+}
+
+.primary_nav .custom_nav .nav-link:hover, .primary_nav .custom_nav .nav-link.active, .primary_nav .custom_nav .nav-link:active {
+    border-left: solid 4px var(--primary);
+    color: var(--primary);
+    background-color: transparent !important;
+    background-image: linear-gradient(90deg, rgba(16, 85, 152, 0.15) 0%, rgba(74, 144, 226, 0.00) 100%);
+}
+
+.primary_nav .custom_nav .nav-link:hover .nav_img, .primary_nav .custom_nav .nav-link.active .nav_img, .primary_nav .custom_nav .nav-link:active .nav_img {
+    display: none;
+}
+
+.primary_nav .custom_nav .nav-link:hover .nav_img_active, .primary_nav .custom_nav .nav-link.active .nav_img_active, .primary_nav .custom_nav .nav-link:active .nav_img_active {
+    display: block;
+}
+
+/* ============== ends: primary_nav css ============== */
+
+/* ============== main content css ============== */
+
+.main_content .content_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main_content .content_header .header_sub_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_content .content_header .filterNavBtn {
+    display: none;
+}
+
+.main_content .header_sub_row .filterNavBtn {
+    margin-right: 10px;
+}
+
+.main_wrapper .close_icon img {
+    display: none;
+    position: absolute;
+    width: 30px;
+    right: 0;
+    margin: 10px;
+    top: 0;
+}
+
+.main_content .header_sub_row .filterNavBtn:last-child {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.main_content .content_header .form-group {
+    width: 470px;
+    margin-bottom: 0;
+}
+
+.main_content .content_header .search-control {
+    width: 400px
+}
+
+.main_content .content_header .form-control {
+    width: 100%;
+    padding: 13px 13px 20px 40px;
+    border: 0;
+    background: transparent;
+    font-size: 13px;
+    color: var(--primary100) !important;
+    border-bottom: 1px solid #d9e5f1;
+    border-radius: 0;
+}
+
+.main_content .content_header .form-control:focus {
+    border-color: var(--black);
+}
+
+.main_content .content_header .search_icon {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.main_content .content_header .calander_block {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--white);
+    padding: 15px 20px;
+    font-size: 13px;
+    white-space: nowrap
+}
+
+.main_content .calander_block .form-control {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 13px;
+    color: var(--primary100) !important;
+    border-radius: 0;
+}
+
+.main_content .content_header .calander_icon {
+    margin-right: 10px;
+}
+
+.main_content .transaction_card {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main_content .transaction_card .transaction_graph_block {
+    width: 100%;
+}
+.main_content .transaction_graph_block  h6{
+    margin-bottom: 15px;
+}
+
+.main_content .transaction_graph_block .graph_img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.main_content .transaction_report_block {
+    padding-left: 10px;
+    width: 200px;
+}
+
+.main_content .transaction_report_block .progressbar_row {
+    margin-bottom: 15px;
+}
+
+.main_content .transaction_report_block h6 {
+    margin-bottom: 20px;
+}
+
+.main_content .transaction_report_block .weekProfit {
+    display: flex;
+    color: #4A4A4A;
+}
+
+.main_content .transaction_report_block .weekProfit h4 {
+    font-weight: var(--fontSemiBold);
+    color: #4A4A4A;
+    font-size: 20px !important;
+}
+
+.main_content .transaction_report_block span {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.main_content .table_card {
+    flex-direction: column;
+}
+
+.main_content .table_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main_content .table_header h6 {
+    color: var(--black);
+    font-weight: var(--fontLight);
+}
+
+.main_content .table_header .filters_icon {
+    padding-left: 10px;
+}
+
+.main_content .project_home_table td h6 {
+    padding-left: 5px;
+}
+
+.team_profile_row {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.team_profile_row .team_profile {
+    position: absolute;
+    left: -15px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.team_profile_row .team_profile:nth-child(2) {
+    position: absolute;
+    left: 3px;
+    z-index: 2;
+}
+
+.team_profile_row .team_profile:nth-child(3) {
+    position: absolute;
+    left: 20px;
+    z-index: 2;
+}
+
+/* ============== ends: main content css ============== */
+
+/* ============== secondary nav css ============== */
+
+.secondary_nav .nav_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.secondary_nav .nav_header .nav_profile {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.secondary_nav .nav_header .nav_right_block {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary_nav .health_detail_card {
+    justify-content: space-evenly;
+    padding: 12px 15px;
+    margin-bottom: 50px;
+}
+
+.secondary_nav .health_block {
+    border-right: 1px solid var(--gray100);
+    padding-right: 20px;
+    text-align: center;
+}
+
+.secondary_nav .health_detail_card .health_block:last-child {
+    border-right: 0;
+}
+
+.secondary_nav .health_block h4 {
+    font-size: 15px;
+    color: var(--black);
+    font-weight: var(--fontLight);
+    margin-bottom: 2px;
+}
+
+.secondary_nav .health_block h6 {
+    font-weight: var(--fontLight);
+    color: var(--primary100);
+}
+
+.secondary_nav .choose_date_row {
+    width: 100%;
+}
+
+.secondary_nav .choose_date_row ul {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+
+.secondary_nav .choose_date_row a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 8px;
+    margin: 0 2px;
+    border-radius: 20px;
+}
+
+.secondary_nav .choose_date_row a:hover, .secondary_nav .choose_date_row a:active, .secondary_nav .choose_date_row a:focus, .secondary_nav .choose_date_row a.active {
+    background: var(--primary);
+}
+
+.secondary_nav .choose_date_row a span {
+    color: var(--primary100);
+}
+
+.secondary_nav .choose_date_row a:hover span, .secondary_nav .choose_date_row a:active span, .secondary_nav .choose_date_row a:focus span, .secondary_nav .choose_date_row a.active span {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.secondary_nav .match_team_card {
+    padding: 0 30px 60px 30px;
+    position: relative;
+}
+
+.secondary_nav .match_team_card .card_bg {
+    background: url(../images/medal-ic.png) no-repeat;
+    width: 100%;
+    background-size: contain;
+    background-position: right;
+    padding-top: 30px;
+}
+
+.secondary_nav .match_team_card h4 {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: var(--fontRegular);
+}
+
+.secondary_nav .match_team_card hr {
+    margin-bottom: 15px;
+}
+
+.secondary_nav .match_team_card .team_profile_row {
+    margin-top: 40px;
+}
+
+.secondary_nav .match_team_card .team_profile {
+    position: absolute;
+    left: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.secondary_nav .match_team_card .team_profile:nth-child(2) {
+    left: 25px;
+}
+
+.secondary_nav .match_team_card .team_profile:nth-child(3) {
+    left: 50px;
+}
+
+.secondary_nav .match_team_card .team_profile:nth-child(4) {
+    left: 75px;
+}
+
+.secondary_nav .match_team_card .team_profile:nth-child(5) {
+    left: 100px;
+    height: 36px;
+    width: 36px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondary_nav .match_team_card .btn_modal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px 15px;
+    border-top-left-radius: 20px;
+    color: var(--primary);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondary_nav .title {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.secondary_nav .card.session_card {
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 30px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.secondary_nav .session_card .card_bg {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.secondary_nav .session_card  .card_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1
+}
+
+.secondary_nav .session_card h6 {
+    font-weight: var(--fontRegular);
+    margin-bottom: 15px;
+}
+
+.secondary_nav .session_card span {
+    color: var(--primary100);
+}
+
+.secondary_nav .session_card hr {
+    width: 100%;
+    margin: 15px 0;
+}
+.canvasjs-chart-credit
+{
+    display: none !important
+}
+/* ============== ends: secondary nav css ============== */
+
+#chartContainer
+{
+    height: 200px;
+    width: 100%;
+}

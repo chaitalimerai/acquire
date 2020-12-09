@@ -1,0 +1,103 @@
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199px) {
+    .main_content {
+        padding: 10px;
+    }
+    .card {
+        padding: 10px 10px 0 10px;
+        margin-bottom: 20px;
+    }
+    .main_content .content_header .form-group {
+        width: 100%;
+    }
+}
+
+/* only width - 1024 */
+
+@media only screen and (width: 1024px) {
+    .primary_nav {
+        width: 300px;
+    }
+    .secondary_nav {
+        width: 500px;
+        padding: 10px;
+    }
+}
+
+/* Small devices (portrait phones, landscape phones, less than 768px) */
+
+@media (max-width: 768px) {
+    .primary_nav, .secondary_nav {
+        display: none;
+    }
+    .main_wrapper .close_icon img, .main_content .content_header .filterNavBtn {
+        display: flex;
+    }
+    .main_content .content_header .filterNavBtn:first-child {
+        color: var(--primary);
+    }
+    .main_content .content_header .header_sub_row {
+        width: 100%;
+    }
+    .main_content .content_header .header_sub_row {
+        justify-content: flex-end;
+    }
+    .main_content .content_header .calander_block {
+        padding: 10px 5px;
+    }
+    /* ========== sidebar css ========== */
+    .primary_nav, .secondary_nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        display: none;
+        /* padding-bottom: 150px; */
+        z-index: 10000;
+        box-shadow: -3px 1px 13px 0px #e2e2e2;
+    }
+    .primary_nav {
+        width: 300px;
+    }
+    .secondary_nav {
+        right: 0;
+        left: auto;
+        width: 400px;
+    }
+    #primaryNavBtn:checked~.primary_nav, #secondaryNavBtn:checked~.secondary_nav {
+        display: flex;
+    }
+    /* ========== ends: sidebar css ========== */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767px) {
+    .primary_nav, .secondary_nav {
+        width: 100%;
+    }
+    #chartContainer {
+        height: 100px;
+        width: 100%;
+    }
+    .main_content .transaction_report_block .weekProfit h4, .main_content h4 {
+        font-size: 16px !important;
+    }
+    .main_content .content_header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .main_content .content_header .header_sub_row {
+        justify-content: space-between;
+    }
+    .main_content .transaction_card {
+        flex-direction: column;
+    }
+    .table th {
+        font-size: 14px;
+    }
+    .content_header .header_sub_row:last-child {
+        margin-top: 20px;
+    }
+}

@@ -1,1 +1,478 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Acquire | Home</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- font awesome icons css -->
+    <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css" />
+    <!-- custom css -->
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <!-- responsive css -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- progressbar slider css -->
+    <link href="assets/vendors/css/progressbar_slider.css" rel="stylesheet">
+    <!-- datetimepicker css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/jquery.datetimepicker.min.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="./assets/vendors/css/animate.min.css">
+</head>
+
+<body>
+
+    <!-- main wrapper -->
+    <div class="main_wrapper">
+        <!-- left sidebbar -->
+        <input type="checkbox" class="d-none" id="primaryNavBtn">
+        <nav class="primary_nav animate__animated animate__fadeInLeft" id="primary_nav">
+            <label for="primaryNavBtn" class="close_icon" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="./assets/images/icons/close_iocn.png" width="50" alt="close_iocn">
+            </label>
+            <div class="nav-brand">
+                <img src="./assets/images/logo.png" alt="Logo">
+                <span>Dashboard</span>
+            </div>
+            <ul class="custom_nav nav nav-pills flex-column" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-dashboard-tab" data-toggle="pill" href="#pills-dashboard"
+                        role="tab" aria-controls="pills-dashboard" aria-selected="true">
+                        <img src="./assets/images/icons/dashboard.png" class="nav_img" alt="Dashboard Icon">
+                        <img src="./assets/images/icons/dashboard_active.png" class="nav_img_active"
+                            alt="Dashboard Icon">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-employee-tab" data-toggle="pill" href="#pills-employee" role="tab"
+                        aria-controls="pills-employee" aria-selected="true">
+                        <img src="./assets/images/icons/employees.png" class="nav_img" alt="Employee Icon">
+                        <img src="./assets/images/icons/employees_active.png" class="nav_img_active"
+                            alt="Employee Icon">
+                        Employees
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-client-tab" data-toggle="pill" href="#pills-client" role="tab"
+                        aria-controls="pills-client" aria-selected="true">
+                        <img src="./assets/images/icons/clients.png" class="nav_img" alt="Client Icon">
+                        <img src="./assets/images/icons/clients_active.png" class="nav_img_active" alt="Client Icon">
+                        Clients
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-project-tab" data-toggle="pill" href="#pills-project" role="tab"
+                        aria-controls="pills-project" aria-selected="true">
+                        <img src="./assets/images/icons/projects.png" class="nav_img" alt="project Icon">
+                        <img src="./assets/images/icons/projects_active.png" class="nav_img_active" alt="project Icon">
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-policies-tab" data-toggle="pill" href="#pills-policies" role="tab"
+                        aria-controls="pills-policies" aria-selected="true">
+                        <img src="./assets/images/icons/policies.png" class="nav_img" alt="Policies Icon">
+                        <img src="./assets/images/icons/policies_active.png" class="nav_img_active" alt="Policies Icon">
+                        policies
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-account-tab" data-toggle="pill" href="#pills-account" role="tab"
+                        aria-controls="pills-account" aria-selected="true">
+                        <img src="./assets/images/icons/accounts.png" class="nav_img" alt="account Icon">
+                        <img src="./assets/images/icons/accounts_active.png" class="nav_img_active" alt="account Icon">
+                        Accounts
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-account-tab" data-toggle="pill" href="#pills-account" role="tab"
+                        aria-controls="pills-account" aria-selected="true">
+                        <img src="./assets/images/icons/payrolls.png" class="nav_img" alt="account Icon">
+                        <img src="./assets/images/icons/payrolls_active.png" class="nav_img_active" alt="account Icon">
+                        Payrolls
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-report-tab" data-toggle="pill" href="#pills-report" role="tab"
+                        aria-controls="pills-report" aria-selected="true">
+                        <img src="./assets/images/icons/reports.png" class="nav_img" alt="report Icon">
+                        <img src="./assets/images/icons/reports_active.png" class="nav_img_active" alt="report Icon">
+                        Reports
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#pills-setting" role="tab"
+                        aria-controls="pills-setting" aria-selected="true">
+                        <img src="./assets/images/icons/settings.png" class="nav_img" alt="setting Icon">
+                        <img src="./assets/images/icons/settings_active.png" class="nav_img_active" alt="setting Icon">
+                        settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- left sidebbar -->
+
+        <!-- main content -->
+        <main class="main_content">
+            <header class="content_header">
+                <div class="header_sub_row">
+                    <label for="primaryNavBtn" class="filterNavBtn" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify fa-2x"></i>
+                    </label>
+                    <div class="form-group">
+                        <img src="./assets/images/icons/search_icon.png" class="search_icon" alt="search icon">
+                        <input type="text" class="search-control form-control"
+                            placeholder="Search for athlete profile data, workout and meditation sessions">
+                    </div>
+                </div>
+                <div class="header_sub_row">
+                    <div class="calander_block">
+                        <img src="./assets/images/icons/time_icon.png" class="calander_icon" alt="Clock icon">
+                        <!-- <div class='input-group date'>
+                        <input type='text' class="form-control" placeholder="Select Datetime" id='datetimepicker1' />
+                        </div> -->
+                        <input type="text" class="form-control" placeholder="Select Date & Time" name="filter_date"
+                            id="filter_date" />
+                        <!-- 11:24 AM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Today, May 1 -->
+                    </div>
+                    <label for="secondaryNavBtn" class="filterNavBtn btn btn-sm btn-primary" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        Appointment
+                    </label>
+                </div>
+            </header>
+            <section class="transaction_card card">
+                <div class="transaction_graph_block">
+                    <h6>Total Transactions</h6>
+                    <div id="chartContainer"></div>
+                </div>
+                <div class="transaction_report_block">
+                    <h6>Report</h6>
+                    <span>Last Week Profit</span>
+                    <!-- <span class="sr-only">+29%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                            aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                        </div>
+                    </div> -->
+                    <div class="progressbar_row">
+                        <label for="lastWeekProfit">
+                            <div class="weekProfit">
+                                <h4>+<h4 id="lastWeekProfitValue">29.7</h4>%</h4>
+                            </div>
+                        </label>
+                        <input id="lastWeekProfit" name="blinds" type="text" data-slider-min="1" data-slider-max="100"
+                            data-slider-step="1" data-slider-value="29.7" />
+                    </div>
+                    <span>This Week Profit</span>
+                    <div class="progressbar_row lossProfit">
+                        <label for="thisWeekProfit">
+                            <div class="weekProfit">
+                                <h4>-<h4 id="thisWeekProfitValue">53.4</h4>%</h4>
+                            </div>
+                        </label>
+                        <input id="thisWeekProfit" name="blinds" type="text" data-slider-min="1" data-slider-max="100"
+                            data-slider-step="1" data-slider-value="53.4" />
+                    </div>
+                </div>
+            </section>
+            <section class="table_card card">
+                <div class="table_header">
+                    <h6>Project Summary</h6>
+                    <button type="button" class="btn btn-outline-secondary">
+                        Filter
+                        <img src="./assets/images/icons/filters_icon.png" class="filters_icon" alt="filters_icon">
+                    </button>
+                </div>
+                <div class="project_home_table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="thead">
+                                <th>#</th>
+                                <th>Project Name</th>
+                                <th>Team</th>
+                                <th>Project Cost</th>
+                                <th>Project Status</th>
+                                <th>Payment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>A012</th>
+                                <td>Paytm bank app</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$34,220</td>
+                                <td>Completed</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-success"></span>
+                                        <h6>Done</h6>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>D372</th>
+                                <td>Cytrust Dashboard</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$58,000</td>
+                                <td>In Progress</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-danger"></span>
+                                        <h6>Pending</h6>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>A012</th>
+                                <td>Paytm bank app</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$34,220</td>
+                                <td>Completed</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-success"></span>
+                                        <h6>Done</h6>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>D372</th>
+                                <td>Cytrust Dashboard</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$58,000</td>
+                                <td>In Progress</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-danger"></span>
+                                        <h6>Pending</h6>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>A012</th>
+                                <td>Paytm bank app</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$34,220</td>
+                                <td>Completed</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-success"></span>
+                                        <h6>Done</h6>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>D372</th>
+                                <td>Cytrust Dashboard</td>
+                                <td>
+                                    <div class="team_profile_row">
+                                        <img src="./assets/images/profile2.png" class="team_profile" alt="profile1">
+                                        <img src="./assets/images/profile3.png" class="team_profile" alt="profile2">
+                                        <img src="./assets/images/profile4.png" class="team_profile" alt="profile3">
+                                    </div>
+                                </td>
+                                <td>$58,000</td>
+                                <td>In Progress</td>
+                                <td>
+                                    <div class="flexbox">
+                                        <span class="badge badge-danger"></span>
+                                        <h6>Pending</h6>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <!--ends:  main content -->
+
+        <!-- right sidebbar -->
+        <input type="checkbox" class="d-none" id="secondaryNavBtn">
+        <aside class="secondary_nav animate__animated animate__fadeInRight" id="secondary_nav">
+            <label for="secondaryNavBtn" class="close_icon" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="./assets/images/icons/close_iocn.png" width="50" alt="close_iocn">
+            </label>
+            <div class="nav_header">
+                <img src="./assets/images/profile5.png" class="nav_profile" alt="User Profile">
+                <div class="nav_right_block">
+                    <h6>Isaac Williams</h6>
+                    <span>25 years old, London</span>
+                </div>
+            </div>
+            <section class="health_detail_card card card_success">
+                <div class="health_block pr-0">
+                    <h4>Blood</h4>
+                    <h6>O+</h6>
+                </div>
+                <div class="health_block pl-0">
+                    <h4>Height</h4>
+                    <h6>186cm</h6>
+                </div>
+                <div class="health_block">
+                    <h4>Weight</h4>
+                    <h6>90kg</h6>
+                </div>
+            </section>
+            <div class="custom-select" name="month-select">
+                <select>
+                    <option value="1">January</option>
+                    <option value="2">Fabuary</option>
+                    <option value="3" selected>March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">Sepetmber</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div class="choose_date_row">
+                <ul>
+                    <a href="#">
+                        <span>Mon</span>
+                        <span>9</span>
+                    </a>
+                    <a href="#">
+                        <span>Tues</span>
+                        <span>10</span>
+                    </a>
+                    <a href="#">
+                        <span>Wed</span>
+                        <span>11</span>
+                    </a>
+                    <a href="#" class="active">
+                        <span>Thu</span>
+                        <span>12</span>
+                    </a>
+                    <a href="#">
+                        <span>Fri</span>
+                        <span>13</span>
+                    </a>
+                    <a href="#">
+                        <span>Sat</span>
+                        <span>14</span>
+                    </a>
+                    <a href="#">
+                        <span>Sun</span>
+                        <span>15</span>
+                    </a>
+                    <a href="#">
+                        <span>Mon</span>
+                        <span>16</span>
+                    </a>
+
+                </ul>
+            </div>
+            <section class="match_team_card card card_primary">
+                <div class="card_bg">
+                    <h4>Match against Team B</h4>
+                    <h4 class="mt-3">9:00AM - 11:30AM</h4>
+                    <h4 class="mb-3">Coach : Nelson Hendricks</h4>
+                    <hr>
+                    <div class="team_profile_row">
+                        <img src="./assets/images/profile1.png" class="team_profile" alt="profile1">
+                        <img src="./assets/images/profile1.png" class="team_profile" alt="profile2">
+                        <img src="./assets/images/profile1.png" class="team_profile" alt="profile3">
+                        <img src="./assets/images/profile1.png" class="team_profile" alt="profile3">
+                        <a href="#" class="team_profile">+12</a>
+                    </div>
+                    <a href="#" class="btn_modal">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="session_card card card_success">
+                <img src="./assets/images/health.png" class="card_img" alt="health">
+                <div class="card_bg">
+                    <h6>Health appointment</h6>
+                    <span>9:00AM - 11:30AM</span>
+                    <span>Dr. Douglas Wade</span>
+                    <hr>
+                    <button type="button" class="btn btn-sm  btn-primary">Follow-up</button>
+                </div>
+            </section>
+            <h4 class="title">Post workout sessions</h4>
+            <section class="session_card meditation_card card card_success">
+                <img src="./assets/images/meditation.png" class="card_img" alt="meditation">
+                <div class="card_bg">
+                    <h6>Meditaion</h6>
+                    <span>5:00PM - 6:00PM</span>
+                    <span>Coach : Tim Bjorvick</span>
+                </div>
+            </section>
+        </aside>
+        <!-- ends: right sidebbar -->
+    </div>
+    <!-- ends: main wrapper -->
+
+    <!-- JavaScript-->
+    <script src="./assets/vendors/jquery/jquery.min.js"></script>
+    <script src="./assets/vendors/js/moment.min.js"></script>
+    <script type='text/javascript' src="./assets/vendors/js/progressbar_slider.js"></script>
+    <script type='text/javascript' src="./assets/vendors/js/jquery.datetimepicker.full.js"></script>
+    <script type='text/javascript' src="assets/vendors/js/custom_select.js"></script>
+    <script src="./assets/vendors/js/canvasjs.min.js"></script>
+    <script type='text/javascript' src="assets/js/chart.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            'use strict';
+            jQuery('#filter_date').datetimepicker();
+        });
+        /* ===========lastWeekProfitBar Progressbar=========== */
+        $("#lastWeekProfit").slider();
+        $("#lastWeekProfit").on('slide', function (slideEvt) {
+            $("#lastWeekProfitValue").text(slideEvt.value);
+        });
+        /* ===========thisWeekProfitBar Progressbar=========== */
+        $("#thisWeekProfit").slider();
+        $("#thisWeekProfit").on('slide', function (slideEvt) {
+            $("#thisWeekProfitValue").text(slideEvt.value);
+        });
+    </script>
+
+</body>
+
+</html>
